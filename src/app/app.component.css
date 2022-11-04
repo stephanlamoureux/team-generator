@@ -23,6 +23,23 @@ h1 {
 		0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (max-width: 575px) {
+	h1 {
+		font-size: 1.7rem;
+	}
+}
+
+@media screen and (max-width: 490px) {
+	h1 {
+		font-size: 1.5rem;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+	}
+}
+
 .names-list {
 	padding: 1rem;
 	width: 100%;
