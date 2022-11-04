@@ -7,17 +7,28 @@
 .card {
 	padding: 2rem;
 	width: 100%;
+	background-color: #eaeaea;
+	height: 33%;
 }
 
 h1 {
-	font-size: 3rem;
+	font-size: 2.2rem;
+	text-align: center;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #1b1c1d;
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+		0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+		0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+		0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
 .names-list {
 	padding: 1rem;
 	width: 100%;
-	height: 10rem;
-	border: 0.1rem solid grey;
+	height: 15rem;
+	border-radius: 0.28571429rem;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 	overflow: auto;
 }
 
@@ -29,38 +40,57 @@ li {
 
 .add-members-container input {
 	border: none;
-	border-bottom: 0.1rem solid rgba(128, 128, 128, 0.418);
+	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.418);
+	margin-top: 1rem;
 	margin-right: 0.5rem;
 	width: 100%;
 	display: flex;
+	padding: 5px;
+	background-color: #eaeaea;
+	color: black;
+}
+
+.add-members-container input::placeholder {
+	color: rgba(0, 0, 0, 0.666);
 }
 
 .add-members-container button {
 	width: 100%;
-	border: none;
-	color: white;
 	font-weight: 400;
 	cursor: pointer;
-	background-color: rgb(0, 53, 139);
 	margin-top: 0.5rem;
 }
 
 .generate-container {
-	margin: 2rem 0;
+	margin: 2rem 0 1rem 0;
 	display: flex;
 	height: 2rem;
 }
 
 .generate-container button {
 	width: 50%;
-	background-color: darkcyan;
-	border: none;
-	color: white;
 	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	display: flex;
 }
 
 .generate-container input {
 	width: 50%;
+	margin-right: 20px;
+	padding: 5px;
+	border-radius: 0.28571429rem;
+	background-color: #eaeaea;
+}
+
+.generate-container input::placeholder {
+	color: rgba(0, 0, 0, 0.666);
+}
+
+input:focus,
+input:active {
+	background-color: #d0cfcf;
+	outline-color: #9628ba;
 }
 
 .error-msg {

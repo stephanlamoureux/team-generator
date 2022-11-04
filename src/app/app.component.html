@@ -1,28 +1,24 @@
 <div class="container">
 	<div class="ui card">
-
-		<h1>Team Generator</h1>
+		<h1><i class="users icon"></i> Team Generator</h1>
 		<ul class="names-list">
 			<li *ngFor="let member of members">{{ member }}</li>
 		</ul>
 
 		<div class="add-members-container">
-			<input
-			#addMemberInput
-			type="text"
-			placeholder="Name"
-			(input)="inputName(addMemberInput.value)"
-			/>
-			<button type="submit" (click)="addMember()">Add</button>
+			<input #newName type="text" placeholder="Name" (input)="inputName(newName.value)" />
+			<button type="submit" (click)="addMember()" class="ui pink button">
+				<i class="plus circle icon"></i>
+				Add
+			</button>
 		</div>
 
 		<div class="generate-container">
-			<input
-			type="text"
-			placeholder="# of teams"
-			/>
-			<button type="submit">Generate</button>
+			<input class="ui input" type="text" placeholder="# of teams" />
+			<button type="submit" class="ui black button">
+				<i class="check circle icon"></i>
+				Generate
+			</button>
 		</div>
-
 	</div>
 </div>
