@@ -6,15 +6,20 @@ import { Component } from '@angular/core'
 	styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-	newMemberName: string = ''
+	newMember: string = ''
 	members: string[] = []
+	errorMessage: string = ''
 
 	inputName(member: string) {
-		this.newMemberName = member
-		console.log(this.newMemberName)
+		this.newMember = member
 	}
 	addMember() {
-		this.members.push(this.newMemberName)
-		console.log(this.members)
+		if (!this.newMember) {
+			this.errorMessage = "Name can't be left blank."
+			return
+		}
+		this.members.push(this.newMember)
+		this.newMember = ''
+		this.errorMessage = ''
 	}
 }

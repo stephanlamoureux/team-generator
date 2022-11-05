@@ -57,7 +57,7 @@ li {
 
 .add-members-container input {
 	border: none;
-	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.418);
+	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.5);
 	margin-top: 1rem;
 	margin-right: 0.5rem;
 	width: 100%;
@@ -68,7 +68,7 @@ li {
 }
 
 .add-members-container input::placeholder {
-	color: rgba(0, 0, 0, 0.666);
+	color: rgba(0, 0, 0, 0.4);
 }
 
 .add-members-container button {
@@ -101,7 +101,7 @@ li {
 }
 
 .generate-container input::placeholder {
-	color: rgba(0, 0, 0, 0.666);
+	color: rgba(0, 0, 0, 0.4);
 }
 
 input:focus,
@@ -112,4 +112,5 @@ input:active {
 
 .error-msg {
 	color: red;
+	margin-top: 14px;
 }
