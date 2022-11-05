@@ -21,8 +21,18 @@
 		</div>
 
 		<div class="generate-container">
-			<input class="ui input" type="text" placeholder="# of teams" />
-			<button type="submit" class="ui black button">
+			<input
+			#teamNumber
+			(input)="inputTeams(teamNumber.value)"
+			[value]="numberOfTeams"
+			class="ui input"
+			type="number"
+			placeholder="# of teams"
+			/>
+			<button
+			(click)="generateTeam()"
+			type="submit"
+			class="ui black button">
 				<i class="check circle icon"></i>
 				Generate
 			</button>
