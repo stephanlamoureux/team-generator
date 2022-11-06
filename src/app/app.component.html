@@ -1,12 +1,11 @@
 <div class="ui container">
-	<div class="ui card">
+	<div class="ui card" [ngClass]="{ hidden: teams.length, ' ': !teams.length }">
 		<h1><i class="users icon"></i> Team Generator</h1>
 		<ul class="names-list">
 			<li *ngFor="let member of members">{{ member }}</li>
 		</ul>
 
 		<div class="add-members-container">
-			<!-- [value] attribute directive, value is equal to the newMember variable -->
 			<input
 				#newName
 				type="text"
@@ -22,21 +21,34 @@
 
 		<div class="generate-container">
 			<input
-			#teamNumber
-			(input)="inputTeams(teamNumber.value)"
-			[value]="numberOfTeams"
-			class="ui input"
-			type="number"
-			placeholder="# of teams"
+				#teamNumber
+				(input)="inputTeams(teamNumber.value)"
+				[value]="numberOfTeams"
+				class="ui input"
+				type="number"
+				placeholder="# of teams"
 			/>
-			<button
-			(click)="generateTeam()"
-			type="submit"
-			class="ui black button">
+			<button (click)="generateTeams()" type="submit" class="ui black button">
 				<i class="check circle icon"></i>
 				Generate
 			</button>
 		</div>
 		<p *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</p>
 	</div>
+	<!-- card -->
+
+	<div *ngIf="teams.length" class="teams-container">
+		<app-team
+			*ngFor="let team of teams; let i = index"
+			class="ui card team-card"
+			[team]="team"
+			[index]="i"
+		></app-team>
+
+		<button (click)="clear()" type="submit" class="ui red button clear">
+			<i class="check circle icon"></i>
+			Clear
+		</button>
+	</div>
 </div>
+<!-- container -->

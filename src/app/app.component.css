@@ -49,10 +49,10 @@ h1 {
 	overflow: auto;
 }
 
-li {
+.names-list li {
 	list-style-type: none;
 	font-size: 1.25rem;
-	margin-bottom: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .add-members-container input {
@@ -104,6 +104,12 @@ li {
 	color: rgba(0, 0, 0, 0.4);
 }
 
+.teams-container .team-card {
+	padding: 2rem 1rem;
+	width: 100%;
+	background-color: #eaeaea;
+}
+
 input:focus,
 input:active {
 	background-color: #d0cfcf;
@@ -113,4 +119,13 @@ input:active {
 .error-msg {
 	color: red;
 	margin-top: 14px;
+}
+
+.hidden {
+	display: none;
+}
+
+.clear {
+	width: 100%;
+	margin-top: 1rem;
 }
