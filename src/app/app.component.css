@@ -110,6 +110,17 @@ h1 {
 	background-color: #eaeaea;
 }
 
+@media screen and (max-width: 767px) {
+	.teams-container {
+		width: 25rem;
+	}
+
+	.ui.container {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+}
+
 input:focus,
 input:active {
 	background-color: #d0cfcf;
