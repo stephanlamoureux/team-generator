@@ -44,11 +44,16 @@ h1 {
 	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.5);
 	margin-top: 1rem;
 	margin-right: 0.5rem;
+	margin-bottom: 14px;
 	width: 100%;
 	display: flex;
 	padding: 5px;
 	background-color: #eaeaea;
 	color: black;
+}
+
+.add {
+	margin-bottom: 10px;
 }
 
 .add-members-container input::placeholder {
@@ -59,13 +64,11 @@ h1 {
 	width: 100%;
 	font-weight: 400;
 	cursor: pointer;
-	margin-top: 0.5rem;
 }
 
 .generate-container {
-	margin: 2rem 0 1rem 0;
+	margin: 1rem 0 1rem 0;
 	display: flex;
-	height: 2rem;
 }
 
 .generate-container button {
@@ -111,8 +114,19 @@ input:active {
 }
 
 .clear {
+	border: none;
+	cursor: pointer;
+	background: transparent;
+}
+
+.clear i {
+	font-size: 1rem;
+	color: red;
+}
+
+.clear-teams {
 	width: 100%;
-	margin-top: 1rem;
+	margin-top: 5px;
 }
 
 @media screen and (max-width: 767px) {

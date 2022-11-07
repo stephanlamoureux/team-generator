@@ -18,7 +18,6 @@ export class AppComponent {
 
 	inputTeams(teamNumber: string) {
 		this.numberOfTeams = Number(teamNumber)
-		console.log(this.numberOfTeams)
 	}
 
 	addMember() {
@@ -29,6 +28,10 @@ export class AppComponent {
 		this.members.push(this.newMember)
 		this.newMember = ''
 		this.errorMessage = ''
+	}
+
+	clearMember() {
+		this.members = []
 	}
 
 	generateTeams() {

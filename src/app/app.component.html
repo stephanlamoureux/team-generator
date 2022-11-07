@@ -2,7 +2,12 @@
 	<div class="ui card" [ngClass]="{ hidden: teams.length, ' ': !teams.length }">
 		<h1><i class="users icon"></i> Team Generator</h1>
 		<ul class="names-list">
-			<li *ngFor="let member of members">{{ member | titlecase}}</li>
+			<li *ngFor="let member of members">
+				{{ member | titlecase }}
+				<button *ngIf="members.length" (click)="clearMember()" type="submit" class="ui red clear">
+					<i class="close icon"></i>
+				</button>
+			</li>
 		</ul>
 
 		<div class="add-members-container">
@@ -13,7 +18,8 @@
 				(input)="inputName(newName.value)"
 				[value]="newMember"
 			/>
-			<button type="submit" (click)="addMember()" class="ui pink button">
+
+			<button type="submit" (click)="addMember()" class="ui pink button add">
 				<i class="plus circle icon"></i>
 				Add
 			</button>
@@ -44,7 +50,7 @@
 			[index]="i"
 		></app-team>
 
-		<button (click)="clear()" type="submit" class="ui red button clear">
+		<button (click)="clear()" type="submit" class="ui red button clear-teams">
 			<i class="check circle icon"></i>
 			Clear
 		</button>
