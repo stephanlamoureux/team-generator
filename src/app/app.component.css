@@ -9,6 +9,7 @@
 	width: 100%;
 	background-color: #eaeaea;
 	height: 33%;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
@@ -91,6 +92,7 @@ h1 {
 	padding: 2rem 1rem;
 	width: 100%;
 	background-color: #eaeaea;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 
 input:focus,

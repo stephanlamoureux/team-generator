@@ -12,6 +12,7 @@ h2 {
 .teams-list li {
 	padding-left: 10px;
 	padding-bottom: 15px;
+	word-break: break-all;
 }
 
 .teams-list li::marker {

@@ -2,7 +2,7 @@
 	<div class="ui card" [ngClass]="{ hidden: teams.length, ' ': !teams.length }">
 		<h1><i class="users icon"></i> Team Generator</h1>
 		<ul class="names-list">
-			<li *ngFor="let member of members">{{ member }}</li>
+			<li *ngFor="let member of members">{{ member | titlecase}}</li>
 		</ul>
 
 		<div class="add-members-container">
