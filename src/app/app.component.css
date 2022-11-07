@@ -23,23 +23,6 @@ h1 {
 		0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (max-width: 575px) {
-	h1 {
-		font-size: 1.7rem;
-	}
-}
-
-@media screen and (max-width: 490px) {
-	h1 {
-		font-size: 1.5rem;
-		display: flex;
-		flex-direction: column-reverse;
-		justify-content: center;
-		align-items: center;
-		align-content: center;
-	}
-}
-
 .names-list {
 	padding: 1rem;
 	width: 100%;
@@ -110,17 +93,6 @@ h1 {
 	background-color: #eaeaea;
 }
 
-@media screen and (max-width: 767px) {
-	.teams-container {
-		width: 25rem;
-	}
-
-	.ui.container {
-		margin-left: 0 !important;
-		margin-right: 0 !important;
-	}
-}
-
 input:focus,
 input:active {
 	background-color: #d0cfcf;
@@ -139,4 +111,46 @@ input:active {
 .clear {
 	width: 100%;
 	margin-top: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+	.teams-container {
+		width: 30rem;
+	}
+
+	.container {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 475px) {
+	h1 {
+		font-size: 1.8rem;
+	}
+
+	.teams-container {
+		width: 25rem;
+	}
+}
+
+@media screen and (max-width: 393px) {
+	h1 {
+		font-size: 1.6rem;
+	}
+
+	.teams-container {
+		width: 20rem;
+	}
+}
+
+@media screen and (max-width: 364px) {
+	h1 {
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (max-width: 335px) {
+	h1 {
+		font-size: 1.3rem;
+	}
 }
