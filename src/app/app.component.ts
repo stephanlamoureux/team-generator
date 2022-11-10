@@ -6,10 +6,10 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 	templateUrl: './app.component.html',
 	styleUrls: ['./app.component.css'],
 	animations: [
-		trigger('inOutAnimation', [
+		trigger('fadeAnimation', [
 			transition(':enter', [
 				style({ opacity: 0 }),
-				animate('0.5s ease-out', style({ opacity: 1 })),
+				animate('0.4s ease-out', style({ opacity: 1 })),
 			]),
 		]),
 	],

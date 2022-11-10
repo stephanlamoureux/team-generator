@@ -1,5 +1,5 @@
 <div class="ui container">
-	<div class="ui card" [ngClass]="{ hidden: teams.length, ' ': !teams.length }">
+	<div class="ui card" [ngClass]="{ hidden: teams.length, ' ': !teams.length }" [@fadeAnimation]>
 		<h1><i class="users icon"></i> Team Generator</h1>
 		<ul class="names-list">
 			<li *ngFor="let member of members; let i = index">
@@ -53,7 +53,7 @@
 		<p *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</p>
 	</div>
 
-	<div *ngIf="teams.length" class="teams-container" [@inOutAnimation]>
+	<div *ngIf="teams.length" class="teams-container" [@fadeAnimation]>
 		<app-team
 			*ngFor="let team of teams; let i = index"
 			class="ui card team-card"
