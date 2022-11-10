@@ -31,7 +31,7 @@ export class AppComponent {
 	}
 
 	clearMember() {
-		this.members = []
+		this.members.pop()
 	}
 
 	generateTeams() {
