@@ -30,10 +30,6 @@ export class AppComponent {
 		this.errorMessage = ''
 	}
 
-	clearMember() {
-		this.members.pop()
-	}
-
 	generateTeams() {
 		// check to make sure numberOfTeams is a number and has a positive value,
 		// and also check that there aren't more teams than people.

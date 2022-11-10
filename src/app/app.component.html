@@ -2,9 +2,9 @@
 	<div class="ui card" [ngClass]="{ hidden: teams.length, ' ': !teams.length }">
 		<h1><i class="users icon"></i> Team Generator</h1>
 		<ul class="names-list">
-			<li *ngFor="let member of members">
+			<li *ngFor="let member of members; let i = index">
 				{{ member | titlecase }}
-				<button *ngIf="members.length" (click)="clearMember()" type="submit" class="ui red clear">
+				<button *ngIf="members.length" (click)="members.splice(i, 1)" type="submit" class="ui red clear">
 					<i class="close icon"></i>
 				</button>
 			</li>
