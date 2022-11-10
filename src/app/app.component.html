@@ -4,8 +4,13 @@
 		<ul class="names-list">
 			<li *ngFor="let member of members; let i = index">
 				{{ member | titlecase }}
-				<button *ngIf="members.length" (click)="members.splice(i, 1)" type="submit" class="ui red clear">
-					<i class="close icon"></i>
+				<button
+					*ngIf="members.length"
+					(click)="members.splice(i, 1)"
+					type="submit"
+					class="ui red clear"
+				>
+					<i class="close icon red-x"></i>
 				</button>
 			</li>
 		</ul>
@@ -17,9 +22,15 @@
 				placeholder="Name"
 				(input)="inputName(newName.value)"
 				[value]="newMember"
+				(keydown.enter)="addMember()"
 			/>
 
-			<button type="submit" (click)="addMember()" class="ui pink button add">
+			<button
+				type="submit"
+				(click)="addMember()"
+				class="ui pink button add"
+				(keyup.enter)="addMember()"
+			>
 				<i class="plus circle icon"></i>
 				Add
 			</button>
@@ -42,7 +53,7 @@
 		<p *ngIf="errorMessage" class="error-msg">{{ errorMessage }}</p>
 	</div>
 
-	<div *ngIf="teams.length" class="teams-container">
+	<div *ngIf="teams.length" class="teams-container" [@inOutAnimation]>
 		<app-team
 			*ngFor="let team of teams; let i = index"
 			class="ui card team-card"

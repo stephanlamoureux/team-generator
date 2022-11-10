@@ -105,7 +105,7 @@ input:active {
 }
 
 .error-msg {
-	color: red;
+	color: rgb(255, 0, 0);
 	margin-top: 14px;
 }
 
@@ -119,14 +119,16 @@ input:active {
 	background: transparent;
 }
 
-.clear i {
-	font-size: 1rem;
-	color: red;
+.red-x {
+	font-size: 0.9rem;
+	color: rgb(255, 0, 0);
 }
 
 .clear-teams {
 	width: 100%;
 	margin-top: 5px;
+	padding-top: 1em;
+	padding-bottom: 1em;
 }
 
 @media screen and (max-width: 767px) {
