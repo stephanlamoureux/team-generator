@@ -131,13 +131,26 @@ input:active {
 	padding-bottom: 1em;
 }
 
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 1rem 0;
+}
+
+footer p {
+	text-align: center;
+}
+
 @media screen and (max-width: 767px) {
 	.teams-container {
 		width: 30rem;
 	}
 
 	.container {
-		padding: 0;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
